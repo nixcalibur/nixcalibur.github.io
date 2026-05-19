@@ -1,0 +1,26 @@
+function BlogPostRow({ post, setActivePost }) {
+  return (
+    <button className="blog-row" type="button" onClick={() => setActivePost(post)}>
+      <span className="blog-date">{post.date}</span>
+      <span className="blog-title">{post.title}</span>
+      <span className="blog-summary">{post.summary}</span>
+    </button>
+  );
+}
+
+export default function BlogPage({ posts, setActivePost }) {
+  return (
+    <main className="blog-page">
+      <section className="blog-index" aria-labelledby="blog-title">
+        <div className="blog-heading">
+          <p className="eyebrow">Writing Bullshitteries</p>
+          <p>Engineering notes, project logs, and occasional structured nonsense.</p>
+        </div>
+
+        <div className="blog-list">
+          {posts.map((post) => <BlogPostRow key={post.slug} post={post} setActivePost={setActivePost} />)}
+        </div>
+      </section>
+    </main>
+  );
+}

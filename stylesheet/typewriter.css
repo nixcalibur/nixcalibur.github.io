@@ -1,0 +1,102 @@
+body {
+    background: #182028;
+    margin: 0;
+    padding: 0;
+    font-family: Lato, sans-serif;
+    height: 100vh;
+  }
+  
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-content {
+    padding: 2rem;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 8.8vmin;
+    color: #8bf;
+    margin: 0 0 1rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+  
+  /* Typewriter Effect */
+  @keyframes typing {
+    5%, 47%   { content: ""; }
+    7%, 45%    { content: "N"; }
+    9%, 43%    { content: "Ni"; }
+    11%, 41%    { content: "Nik"; }  
+    
+    50%, 100%  { content: ""; }
+    52%, 98%  { content: "a"; }
+    54%, 96%  { content: "a d"; }
+    55%, 94%  { content: "a de"; }
+    56%, 92%  { content: "a dev"; }
+    57%, 90%  { content: "a deve"; }
+    58%, 88%  { content: "a devel"; }
+    59%, 86%  { content: "a develo"; }
+    60%, 84%  { content: "a develop"; }
+    61%, 82%  { content: "a develope"; }
+    62%, 80%  { content: "a developer"; }
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .typewriter {
+    --caret: currentcolor;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  .typewriter::before {
+    content: "";
+    animation: typing 13.5s infinite;
+  }
+  
+  .typewriter::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 0.5s step-end infinite;
+  }
+  
+  /* Optional thicker caret */
+  .typewriter.thick::after {
+    border-right: 1ch solid var(--caret);
+  }
+  
+  /* Disable caret */
+  .typewriter.nocaret::after {
+    border-right: none;
+  }
+  
+  /* Reduced motion fallback */
+  @media (prefers-reduced-motion) {
+    .typewriter::after {
+      animation: none;
+    }
+  
+    @keyframes sequencePopup {
+      0%, 100% { content: "nix"; }
+      50% { content: "developer"; }
+    }
+  
+    .typewriter::before {
+      content: "developer";
+      animation: sequencePopup 12s linear infinite;
+    }
+  }
+  
