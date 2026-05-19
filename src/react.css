@@ -197,7 +197,7 @@ button.pixel-button {
 }
 
 .profile-actions a {
-  color: #d7e2ef;
+  color: #f1f7ff;
   padding: 0;
   text-align: left;
   text-decoration: none;
@@ -331,7 +331,7 @@ button.pixel-button {
 }
 
 .article-header {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .article-header h1 {
@@ -341,18 +341,19 @@ button.pixel-button {
 }
 
 .article-header p:not(.eyebrow) {
-  width: min(700px, 100%);
+  width: min(800px, 100%);
   color: var(--muted);
   line-height: 1.7;
 }
 
 .article-content {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   display: grid;
-  gap: 1.2rem;
-  color: #dce8f5;
-  font-size: 1.05rem;
-  line-height: 1.8;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 .article-content h2 {
@@ -364,7 +365,7 @@ button.pixel-button {
 .article-content h3 {
   margin: 0.6rem 0 0;
   color: var(--accent);
-  font-size: 1.08rem;
+  font-size: 1.3rem;
 }
 
 .article-content p,
@@ -430,7 +431,7 @@ button.pixel-button {
 .article-image figcaption {
   margin-top: 0.45rem;
   color: var(--muted);
-  font-size: 0.84rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 

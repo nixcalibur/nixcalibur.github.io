@@ -31,7 +31,7 @@ export default function PostPage({ post, setPage }) {
     return (
       <main className="blog-page">
         <article className="section-shell article-page">
-          <button className="article-back" type="button" onClick={() => setPage('blog')}>Back to blog</button>
+          <button className="pixel-button" type="button" onClick={() => setPage('blog')}>Back to blog</button>
           <h1>Post not found</h1>
         </article>
       </main>
@@ -41,9 +41,10 @@ export default function PostPage({ post, setPage }) {
   return (
     <main className="blog-page">
       <article className="section-shell article-page">
-        <button className="article-back" type="button" onClick={() => setPage('blog')}>Back to blog</button>
+        <button className="pixel-button" type="button" onClick={() => setPage('blog')}>Back to blog</button>
         <header className="article-header">
-          <p className="eyebrow">{post.date} / {post.tags.join(', ')}</p>
+          <p className="eyebrow">{post.date}</p>
+          <h3 className="article-tags">{post.tags.join(', ')}</h3>
           <h1>{post.title}</h1>
           <p>{post.summary}</p>
         </header>
